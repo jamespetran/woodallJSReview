@@ -194,3 +194,15 @@ $('#stopButton').on('click', function() {
     isGameRunning = false;
 })
 //end
+
+function generateSong(words, notes){
+    let song =`
+    ${words} ${notes}
+    ${words} ${notes}
+    ${words} ${notes}
+    ${words} ${notes}`;
+    return song
+}
+
+let mySong = generateSong('Hey Hey Hey', ' C F G');  //this is an expression
+console.log(`check out ${mySong}`);
