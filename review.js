@@ -43,7 +43,7 @@ Complex datatypes
 
 let nothing = null;
 
-// 🐫 always use camelCase
+// 🐫 always use camelCase with js
 let firstName = "James"
 
 // KEBAB Case // commonly used in html
@@ -60,6 +60,12 @@ let person = {
     age: 31
 }
 
+
+function sum(a,b){
+    return a+b
+}
+
+
 /**
  * Expressions
  * 
@@ -68,5 +74,31 @@ let person = {
  */
 //an expression evaluates to a single value
 7 + 3; //10
-123456
-    
+sum(7,3); //10
+
+let aNumber=7+3; //10
+let anotherNumber=sum(7,3); //10
+
+console.log(`my fav number is ${aNumber}`);
+console.log(`my fav number is`, sum(7,3));
+
+//increment operator
+anotherNumber++; //11
+// exact same as
+anotherNumber = anotherNumber + 1; // 12 
+
+// addition assignment operator
+anotherNumber += 10; // 22
+//equivalent to 
+anotherNumber = anotherNumber +10; //32
+// addition assignment can also be used to concat strings...so watch out lol
+
+//theres modulo %= too
+// +=
+// -=
+// *=
+// /=
+// these assignment operators only work w variables
+
+NaNNaNNaNNaN + "batman";
+
