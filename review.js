@@ -102,3 +102,74 @@ anotherNumber = anotherNumber +10; //32
 
 NaNNaNNaNNaN + "batman";
 
+/*
+conditionals
+*/
+
+if (someBoolean) {
+    //then do this
+}
+else if (someOtherBoolean) {
+    //then do that
+}
+else {
+    //do this if nothing else is truthy
+}
+
+//conditional operator
+if (myNumber > 8) {
+    //do whatever...
+}
+//this will always return a boolean
+
+
+/**
+ *  >   Greater than
+ *  >=  Greater than or equal to
+ *  <   Less than
+ *  <=  Less than or equal to
+ *  === Triple equals (equals)
+ *  ==  Double equals (corece types then compare)
+ *  !== Not equals
+ *  !=  Not equals (coerce types)
+ */
+
+'5' == 5;
+//dont do this
+//do this instead:
+Number('5') === 5;
+
+/**
+ *  Array and loops!
+ *  An array is a list of things
+ */
+let numbers = [1,2,3,4,5];
+let beverages = [
+    'Bubly',
+    'Jasmine tea',
+    'water',
+    'coffee'
+];
+
+/**
+Kinds of loops:
+    for..of
+    for..in
+    for
+    while
+ */
+
+for (let beverage of beverages) {
+    console.log(`I am drinking ${beverage}`);
+}
+//for..of works great for arrays
+
+for (let i = 0; i < beverages.length; i++) {
+    let beverage = beverages[i];
+    console.log(`I am drinking ${beverage}`);
+}
+//for loops work well when looping without using an array...they are more flexible that for..of
+
+//for..in returns the index of the array...not that good
+
+
