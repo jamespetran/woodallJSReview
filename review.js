@@ -55,8 +55,8 @@ let firstName = "James"
 // PascalCase or UpperCamelCase
 
 let person = {
-    firstName: "James"
-    lastName: "Petran"
+    firstName: "James",
+    lastName: "Petran",
     age: 31
 }
 
@@ -168,8 +168,29 @@ for (let i = 0; i < beverages.length; i++) {
     let beverage = beverages[i];
     console.log(`I am drinking ${beverage}`);
 }
-//for loops work well when looping without using an array...they are more flexible that for..of
+//for loops work well when looping (ITERATING) without using an array...they are more flexible that for..of
 
-//for..in returns the index of the array...not that good
+//for..in returns the index of the array...not that good unless you really want to use it
 
+// while loop
+// lets keep running this code forever until something changes
 
+//example weather warning system
+let forecast;
+while (forecast.windSpeed < 50 ) {
+    forecast = goAskNWS();
+
+}
+sendAMessageToCustomer();
+//end
+
+//example of a game code thing
+let isGameRunning = true;
+while ( isGameRunning ) {
+    nextTick();
+}
+
+$('#stopButton').on('click', function() {
+    isGameRunning = false;
+})
+//end
