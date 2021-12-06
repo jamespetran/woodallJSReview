@@ -206,3 +206,35 @@ function generateSong(words, notes){
 
 let mySong = generateSong('Hey Hey Hey', ' C F G');  //this is an expression
 console.log(`check out ${mySong}`);
+
+//function declaration
+//this is hoisted - you can call it before it is written
+function sum(n1,n2) {
+    return n1+n2
+}
+
+// function expression
+// create an anonymous function
+// and assign it to a variable called sum
+// you cannot call this before it is written
+let sum = function(n1,n2) {
+    return n1+n2
+}
+
+//anonymous function
+function(n1,n2) {
+    return n1+n2
+}
+
+function sayHell() {
+    console.log('hell');
+}
+
+//you can pass functions to functions...
+function callMeTwoTimes( fn ) {
+    fn();
+    fn();
+}
+
+callMeTwoTimes(sayHell);
+
