@@ -222,9 +222,11 @@ let sum = function(n1,n2) {
 }
 
 //anonymous function
+/*
 function(n1,n2) {
     return n1+n2
 }
+*/
 
 function sayHell() {
     console.log('hell');
@@ -238,3 +240,18 @@ function callMeTwoTimes( fn ) {
 
 callMeTwoTimes(sayHell);
 
+$('button').('click', onButtonClick);
+
+function onButtonClick() {
+    console.log('stop clicking me');
+}
+
+$(document).on('ready', onReady);
+
+function onReady() {
+    console.log('so ready');
+}
+
+$(document).on('ready', function() {
+    console.log('so ready');
+});
