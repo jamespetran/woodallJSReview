@@ -207,11 +207,18 @@ function generateSong(words, notes){
 let mySong = generateSong('Hey Hey Hey', ' C F G');  //this is an expression
 console.log(`check out ${mySong}`);
 
+let theNumber = 500;
+
 //function declaration
 //this is hoisted - you can call it before it is written
 function sum(n1,n2) {
-    return n1+n2
+    //all variables must have 500 added to them by decree
+    return n1+n2+theNumber; 
 }
+
+console.log(`n1 is ${n1}`); 
+// this will fail bc n1 is only contained within the function 
+// above and once its done its done
 
 // function expression
 // create an anonymous function
@@ -240,7 +247,7 @@ function callMeTwoTimes( fn ) {
 
 callMeTwoTimes(sayHell);
 
-$('button').('click', onButtonClick);
+$('button').on('click', onButtonClick);
 
 function onButtonClick() {
     console.log('stop clicking me');
@@ -255,3 +262,12 @@ function onReady() {
 $(document).on('ready', function() {
     console.log('so ready');
 });
+
+//there are built in functions!
+Number('5');    // 5
+let notes= ['do', 're', 'mi'];
+// .push is a METHOD...there are a gazillion methods in js
+notes.push('fa');   // adds an item
+notes.pop();        // removes an item
+notes.shift();      // remove from beginning
+notes.unshift();    // adds to beginning
